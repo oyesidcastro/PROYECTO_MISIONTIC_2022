@@ -1,89 +1,161 @@
+<!-- 
+* Copyright 2018 Carlos Eduardo Alfaro Orellana
+  https://www.youtube.com/c/CarlosAlfaro007
+-->
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistema de inventarios</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-
-
-  <body>
-  	
-	<!-- Todo el lienzo o capa de la vista o sección-->
-    <div id="colorlib-page">
-		
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		
-		<aside id="colorlib-aside" class="bg-secondary">
-			<h1>
-				<a href="index.html">
-					Sistema de Inventario
-				</a>
-			</h1>
-			<nav id="colorlib-main-menu" role="navigation">
-				<ul>
-					<li class="colorlib-active"><a href="index.html"></a></li>
-					<li><a href="Formulario_login.html">Ingrese usuario y clave</a></li>
-					<li><a href="#">Salir del aplicativo</a></li>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<link rel="stylesheet" href="css/material.min.css">
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="js/material.min.js" ></script>
+	<script src="js/sweetalert2.min.js" ></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script src="js/main.js" ></script>
+</head>
+<body>
+	
+	<!-- navLateral -->
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+		<div class="full-width navLateral-body">
+			<div class="full-width navLateral-body-logo text-center tittles">
+				<i class="zmdi zmdi-close btn-menu"></i> DOMGO 
+			</div>
+			
+					
+				
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="home.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-view-dashboard"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								Articles
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-store"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								Kardex
+							</div>
+							<span class="zmdi zmdi-chevron-left"></span>
+						</a>
+						<ul class="full-width menu-principal sub-menu-options">
+							<li class="full-width">
+								<a href="company.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-shopping-cart-plus"></i>
+									</div>
+									<div class="navLateral-body-cr">
+										Shopping
+									</div>
+								</a>
+							</li>
+							<li class="full-width">
+								<a href="providers.html" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-shopping-cart"></i>
+									</div>
+									<div class="navLateral-body-cr">
+										Sales
+									</div>
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-male-female"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								Customers	
+							</div>
+							
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-bus"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								Vendors
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-balance-wallet"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								Reports
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="#!" class="full-width btn-subMenu">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-accounts-alt"></i>
+								
+							</div>
+							<div class="navLateral-body-cr">
+								Users
+							</div>
+						</a>
+					</li>
 				</ul>
 			</nav>
-		</aside>
-
-
-		<div id="colorlib-main">
-	    <div class="bg-light ftco-section">
-	      <div class="container px-md-5">
-
-	        <div class="row mb-5" style="min-height:400px">
-	          
-
-	          <!-- Bloque donde va el contenido y formularios (Capa)  col-md-#  de 1 a 12  -->
-			  <div class="col-md-9">
-	            <div class="mb-4 ml-md-4">
-	              <h2></h2>
-	              	
-	            </div>
-	          </div>
-
-
-			  
-	          <!-- Se puede quitar este bloque (Capa)-->
-	          <div class="col-md text-secondary">
-	            <div class="mb-4">
-	            	<h2 class="text-dark"></h2>
-	            	
-					<div>
-		              
-		            </div>
-					
-	            </div>
-	          </div>
-
-
-	        </div>
-
-
-	        <div class="row bg-dark text-blue">
-	          <div class="col-md-12">
-	            <p>Desarrollo Mision 2022</p>
-	          </div>
-	        </div>
-
-	      </div>
-	    </div>
 		</div>
-	</div>
-	<script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/main.js"></script>
-
-  </body>
+	</section>
+	<!-- pageContent -->
+	<section class="full-width pageContent">
+		<!-- navBar -->
+		<div class="full-width navBar">
+			<div class="full-width navBar-options">
+				<i class="zmdi zmdi-swap btn-menu" id="btn-menu"></i>	
+				
+				<nav class="navBar-options-list">
+					<ul class="list-unstyle">
+						<li class="text-condensedLight noLink" ><small>Home</small></li>
+						<li class="btn-exit" id="btn-exit">
+							<i class="zmdi zmdi-power"></i>
+							<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+						</li>
+						
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<section class="full-width text-center" style="padding: 40px 0;">
+			<h3 class="text-center tittles">espacio para los formularios</h3>
+			<!-- Tiles -->
+			
+		</section>
+		<section class="full-width" style="margin: 30px 0;">
+			<h3 class="text-center tittles">Espacio para los Formularios</h3>
+			
+		</section>
+	</section>
+</body>
 </html>
