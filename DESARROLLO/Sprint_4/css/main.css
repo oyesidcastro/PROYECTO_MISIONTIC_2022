@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #188fe6;
+    position: fixed;
+    z-index: 10;
+}
+
+.lnr-menu{
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: white;
+    border: 1px solid transparent;
+    transition: all 300ms;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.lnr-menu:hover{
+    border: 2px solid white;
+}
+
+
+
+
+
+
+/*Menu*/
+
+
+.menu{
+    width: 240px;
+    height: 100vh;
+    background: #188fe6;
+    overflow: hidden;
+    position: fixed;
+    top: 50px;
+    transition: all 300ms;
+    z-index: 9;
+    overflow: auto;
+}
+
+.menu-show{
+    width: 60px;
+}
+
+.line{
+    margin-top: 10px;
+    padding: 10px;
+    transition: all 300ms;
+}
+
+
+.line:hover{
+    background: #000000; 
+    cursor: pointer;
+}
+.line label{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.line font{
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+
+/*Articulo*/
+
+
+main{
+    position: absolute;
+    top: 50px;
+    left: 280px;
+    padding: 20px;
+    transition: all 300ms;
+}
+
+.main-move{
+    left: 240px;
+}
+
+article h1{
+    font-size: 40px;
+}
+
+article p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+

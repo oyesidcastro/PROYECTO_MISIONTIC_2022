@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articulos</title>
+    <link rel="shortcut icon" href="img/icono.ico">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="C:\xampp\htdocs\Proyecto_inventarios\css\style.css">
+    <link rel="stylesheet" href="C:\xampp\htdocs\Proyecto_inventarios\media\slider_background.jpg">
+
+
+    <script>
+        $(document).ready(function(){
+            // Activate tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            // Select/Deselect checkboxes
+            var checkbox = $('table tbody input[type="checkbox"]');
+            $("#selectAll").click(function(){
+                if(this.checked){
+                    checkbox.each(function(){
+                        this.checked = true;                        
+                    });
+                } else{
+                    checkbox.each(function(){
+                        this.checked = false;                        
+                    });
+                } 
+            });
+            checkbox.click(function(){
+                if(!this.checked){
+                    $("#selectAll").prop("checked", false);
+                }
+            });
+        });
+        </script>
+
+
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <header>
+        
+            <ul><div ><label class="lnr lnr-menu"></label></div></ul>
+            
+       
+    </header>
+    
+    <div class="menu">
+        <div class="line"><a href="index.html" style="text-decoration:none" ><label class="lnr lnr-home"><font>Inicio</font></label></a></div>
+        <div class="line"><a href="articulos.html" style="text-decoration:none" ><label class="lnr lnr-text-format"><font>Articulos</font></label></div>
+        <div class="line"><a href="kardex.html"  style="text-decoration:none"><label class="lnr lnr-store"><font>Kardex</font></label></div>
+        <div class="line"><a href="clientes.html" style="text-decoration:none" ><label class="lnr lnr-users"><font>Clientes</font></label></div>
+        <div class="line"><a href="proveedores.html" style="text-decoration:none" ><label class="lnr lnr-car"><font>Proveedores</font></label></div>
+        <div class="line"><a href="reportes.html"  style="text-decoration:none"><label class="lnr lnr-chart-bars"><font>Reportes</font></label></div>
+        <div class="line"><a href="usuarios.html" style="text-decoration:none" ><label class="lnr lnr-user" ><font >Usuarios</font></label></a></div>
+        
+    </div>
+    
+    <main>
+        
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>Administración de <b>Articulos</b></h2>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar Articulos</span></a>
+                                <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Eliminar</span></a>						
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="selectAll">
+                                        <label for="selectAll"></label>
+                                    </span>
+                                </th>
+                                <th>Codigo</th>
+                                <th>Descripcion</th>
+                                <th>precio</th>
+                                <th>costo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                        <label for="checkbox1"></label>
+                                    </span>
+                                </td>
+                                    <td>1</td>
+                                    <td>Art 1</td>
+                                    <td>Descripcion del Articulos 1</td>
+                                    <td>$59200</td>
+                                    <td>$400000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                        <label for="checkbox2"></label>
+                                    </span>
+                                </td>
+                                <td>2</td>
+                                <td>Art 2</td>
+                                <td>Descripcion del Articulos 2</td>
+                                <td>$45000</td>
+                                <td>$35000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                                        <label for="checkbox3"></label>
+                                    </span>
+                                </td>
+                                <td>3</td>
+                                <td>Art 3</td>
+                                <td>Descripcion del Articulos 3</td>
+                                <td>$70500</td>
+                                <td>$65000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                                        <label for="checkbox4"></label>
+                                    </span>
+                                </td>
+                                <td>4</td>
+                                <td>Art 4</td>
+                                <td>Descripcion del Articulos 4</td>
+                                <td>$79600</td>
+                                <td>$65000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr>					
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                        <label for="checkbox5"></label>
+                                    </span>
+                                </td>
+                                <td>5</td>
+                                <td>Art 5</td>
+                                <td>Descripcion del Articulos 5</td>
+                                <td>$350000</td>
+                                <td>$20000</td>
+                                <td>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                    <div class="clearfix">
+                        <div class="hint-text">Mostrando <b>5</b> registros de  <b>25</b> </div>
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a href="#">Anterior</a></li>
+                            <li class="page-item"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">4</a></li>
+                            <li class="page-item"><a href="#" class="page-link">5</a></li>
+                            <li class="page-item"><a href="#" class="page-link">Siguiente</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <!-- Edit Modal HTML -->
+        <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">						
+                            <h4 class="modal-title">Adicionar Articulos</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">					
+                            <div class="form-group">
+                                <label>Código</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Descripcion</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Precio</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Costo</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-success" value="Adicionar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Modal HTML -->
+        <div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">						
+                            <h4 class="modal-title">Editar Articulos</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">					
+                            <div class="form-group">
+                                <label>Código</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Direccion</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Telefono</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail</label>
+                                <input type="text" class="form-control" required>
+                            </div>					
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-info" value="Grabar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Modal HTML -->
+        <div id="deleteEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">						
+                            <h4 class="modal-title">Eliminar Articulos</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">					
+                            <p>Confirmar Eliminación</p>
+                            <p class="text-warning"><small>This action cannot be undone.</small></p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    
+</body>
+</html>
